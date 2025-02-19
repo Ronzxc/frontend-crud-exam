@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import NiceAvatar, { genConfig } from "react-nice-avatar";
 
 import { UsersContext } from "../../util/ProvideUsers";
-import styles from "./Users.module.scss";
+import styles from "./UsersList.module.scss";
 import { FaArrowLeft, FaArrowRight, FaPlus } from "react-icons/fa";
 import { Button } from "reactstrap";
 
@@ -34,9 +34,10 @@ const UsersList = () => {
     });
   };
 
-  useEffect(() => {
-    paginateUsers(currentPage);
-  }, [currentPage, paginateUsers]); 
+useEffect(() => {
+  paginateUsers(currentPage);
+}, [currentPage, users, paginateUsers]); // ✅ Ensure users update is reflected
+
 
   return (
     <Container className={styles.usersContainer}> 

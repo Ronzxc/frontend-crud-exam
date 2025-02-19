@@ -9,7 +9,7 @@ const UsersProvider = ({ children }) => {
   // Fetch users from API
   const getUsers = useCallback(async () => {
     try {
-      const response = await fetch("https://reqres.in/api/users?page1");
+      const response = await fetch("https://reqres.in/api/users?page=1&per_page=10");
 
       if (!response.ok) {
         throw new Error("Failed to fetch users");
@@ -24,6 +24,7 @@ const UsersProvider = ({ children }) => {
     }
   }, []);
 
+
   useEffect(() => {
     getUsers();
   }, [getUsers]);
@@ -37,11 +38,16 @@ const UsersProvider = ({ children }) => {
   const editUser = (updatedUser) => {
     setUsers((prevUsers) =>
       prevUsers.map((user) =>
-        user.id === updatedUser.id ? { ...user, ...updatedUser } : user
+        user.id === updatedUser.id
+          ? { ...user, ...updatedUser } // ✅ Ensure all fields update correctly
+          : user
       )
     );
+  
+    console.log("Users after update:", users); // Debugging log
   };
-
+  
+  
   // Delete a user from API and update state
   const deleteUser = useCallback(async (id) => {
     try {

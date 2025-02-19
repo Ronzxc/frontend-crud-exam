@@ -4,6 +4,7 @@ import PageFooter from './PageFooter';
 import PageMain from './PageMain';
 import PageNav from './PageNav';
 
+
 function Page(props) {
 	const {children} = props;
 
