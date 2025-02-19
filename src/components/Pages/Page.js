@@ -8,11 +8,15 @@ function Page(props) {
 	const {children} = props;
 
 	return (
+		<>
 		<div className={styles['page']}>
 			<PageNav />
-			<PageMain>{children}</PageMain>
+			<PageMain >{children}</PageMain>
+		</div>
+		<div>
 			<PageFooter />
 		</div>
+		</>
 	);
 }
 

@@ -3,3 +3,14 @@
 	display: flex;
 	flex-direction: row;
 }
+
+:local(.glass-container) {
+	background: rgba(255, 255, 255, 0.15); /* Light transparent background */
+	border-radius: 15px;
+	padding: 20px;
+	backdrop-filter: blur(10px); /* 🔥 The key effect for glassmorphism */
+	-webkit-backdrop-filter: blur(10px);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.3); /* Optional light border */
+  }
+  

@@ -6,6 +6,7 @@ import NiceAvatar, { genConfig } from "react-nice-avatar";
 import { UsersContext } from "../../util/ProvideUsers";
 import styles from "./Users.module.scss";
 import { FaArrowLeft, FaArrowRight, FaPlus } from "react-icons/fa";
+import { Button } from "reactstrap";
 
 const UsersList = () => {
   const { users } = useContext(UsersContext);
@@ -14,10 +15,6 @@ const UsersList = () => {
   const [paginatedUsers, setPaginatedUsers] = useState([]);
   const perPage = 10;
 
-  /**
-   * Memoized function to paginate users.
-   * Prevents unnecessary re-renders.
-   */
   const paginateUsers = useCallback(
     (page) => {
       const start = (page - 1) * perPage;
@@ -27,9 +24,7 @@ const UsersList = () => {
     [users] // Dependency: updates only when users change
   );
 
-  /**
-   * Handles pagination when user clicks next/prev.
-   */
+
   const handlePageTurn = (direction) => {
     setCurrentPage((prevPage) => {
       const nextPage = prevPage + direction;
@@ -39,13 +34,12 @@ const UsersList = () => {
     });
   };
 
-  // Run pagination effect when currentPage changes
   useEffect(() => {
     paginateUsers(currentPage);
-  }, [currentPage, paginateUsers]); // Fixed dependency warning
+  }, [currentPage, paginateUsers]); 
 
   return (
-    <Container>
+    <Container className={styles.usersContainer}> 
       {/* Add User Button */}
       <div className={styles.actionContainer}>
         <Link
@@ -55,11 +49,11 @@ const UsersList = () => {
           }}
           className={styles.link}
         >
-          <button className={`${styles.addButton} rounded`}>
+          <Button color="success" outline>
             <span className="d-flex align-items-center gap-2">
               <FaPlus /> Add User
             </span>
-          </button>
+          </Button>
         </Link>
       </div>
 
@@ -81,7 +75,6 @@ const UsersList = () => {
             <tr key={user.id} className={styles.row}>
               <th scope="row" className="align-middle">{user.id}</th>
 
-              {/* Avatar (Replaced img with NiceAvatar) */}
               <td className="align-middle">
                 <Link
                   to={{
@@ -110,9 +103,9 @@ const UsersList = () => {
                     }}
                     className={styles.link}
                   >
-                    <button className={`${styles.editButton} rounded`}>
+                    <Button color="primary" outline>
                       Edit
-                    </button>
+                    </Button>
                   </Link>
 
                   <Link
@@ -122,9 +115,9 @@ const UsersList = () => {
                     }}
                     className={styles.link}
                   >
-                    <button className={`${styles.deleteButton} rounded`}>
+                    <Button color="danger" outline>
                       Delete
-                    </button>
+                    </Button>
                   </Link>
                 </div>
               </td>
@@ -135,20 +128,20 @@ const UsersList = () => {
 
       {/* Pagination Controls */}
       <div className={styles.pagination}>
-        <button
+        <Button
           type="button"
-          className={styles.pageButton}
+          color="secondary" outline
           onClick={() => handlePageTurn(-1)}
         >
           <FaArrowLeft /> Prev
-        </button>
-        <button
+        </Button>
+        <Button
           type="button"
-          className={styles.pageButton}
+          color="secondary" outline
           onClick={() => handlePageTurn(1)}
         >
           Next <FaArrowRight />
-        </button>
+        </Button>
       </div>
     </Container>
   );

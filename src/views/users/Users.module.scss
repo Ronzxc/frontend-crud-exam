@@ -1,93 +1,52 @@
+.usersContainer {
+  position: relative;
+  background: rgba(255, 255, 255, 0.2);  
+  border-radius: 12px; 
+  padding: 20px;
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); 
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 50px auto;
+  margin-left: 20px;
+  max-width: 1100px;
+  align-content: center;
+}
+
 .actionContainer {
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  
-  .addButton {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+    justify-content: right;
     gap: 10px;
   }
-  
-  .addButton:hover {
-    background-color: #218838;
-  }
-  
-  .row {
-    background-color: white;
-    transition: background 0.3s ease;
-  }
-  
-  .row:hover {
-    background-color: #f8f9fa;
-  }
-  
-  .avatar {
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .avatar:hover {
-    transform: scale(1.1);
-  }
-  
-  .actionButtons {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .editButton,
-  .deleteButton {
-    border: none;
-    padding: 8px 12px;
-    font-size: 14px;
-    cursor: pointer;
-  }
-  
-  .editButton {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  .editButton:hover {
-    background-color: #0056b3;
-  }
-  
-  .deleteButton {
-    background-color: #dc3545;
-    color: white;
-  }
-  
-  .deleteButton:hover {
-    background-color: #c82333;
-  }
-  
-  .pagination {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  
-  .pageButton {
-    border: none;
-    padding: 8px 12px;
-    font-size: 14px;
-    cursor: pointer;
-    background-color: #6c757d;
-    color: white;
-  }
-  
-  .pageButton:hover {
-    background-color: #5a6268;
-  }
-  
+
+.row {
+  background-color: white;
+  transition: background 0.3s ease;
+}
+
+.row:hover {
+  background-color: #f8f9fa;
+}
+
+.avatar {
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.avatar:hover {
+  transform: scale(1.1);
+}
+
+.actionButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: right;
+  gap: 10px;
+  margin-top: 20px;
+}
+
