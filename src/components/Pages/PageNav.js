@@ -1,68 +1,61 @@
-import React, {useState} from 'react';
-import {NavLink as Link} from 'react-router-dom';
+import { FaUsers, FaList, FaDollarSign, FaCog, FaGratipay } from "react-icons/fa";
+import styles from "./PageNav.module.scss";
+import React from "react";
+import { NavLink as Link } from "react-router-dom";
 import {
-	Collapse,
-	Navbar,
-	NavbarToggler,
-	NavbarBrand,
-	Nav,
-	NavItem,
-	NavLink,
-	UncontrolledDropdown,
-	DropdownToggle,
-	DropdownMenu,
-	DropdownItem,
-	NavbarText,
-} from 'reactstrap';
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+} from "reactstrap";
 
-function PageNav() {
-	const [isOpen, setIsOpen] = useState(false);
-	const toggle = () => setIsOpen(!isOpen);
 
-	return (
-		<Navbar color='light' light expand='md'>
-			<NavbarBrand tag={Link} to='/'>
-				Admin
-			</NavbarBrand>
-			<NavbarToggler onClick={toggle} />
-			<Collapse isOpen={isOpen} navbar>
-				<Nav className='mr-auto' navbar>
-					<NavItem>
-						<NavLink tag={Link} to='/users'>
-							Users
-						</NavLink>
-					</NavItem>
-					<NavItem>
-						<NavLink tag={Link} to='/features'>
-							Features
-						</NavLink>
-					</NavItem>
-					<NavItem>
-						<NavLink tag={Link} to='/pricing'>
-							Pricing
-						</NavLink>
-					</NavItem>
-					<NavItem>
-						<NavLink tag={Link} to='/disabled' disabled>
-							Disabled
-						</NavLink>
-					</NavItem>
-					<UncontrolledDropdown nav inNavbar>
-						<DropdownToggle nav caret>
-							Options
-						</DropdownToggle>
-						<DropdownMenu>
-							<DropdownItem>Option 1</DropdownItem>
-							<DropdownItem>Option 2</DropdownItem>
-							<DropdownItem divider />
-							<DropdownItem>Reset</DropdownItem>
-						</DropdownMenu>
-					</UncontrolledDropdown>
-				</Nav>
-				<NavbarText>Simple Text</NavbarText>
-			</Collapse>
-		</Navbar>
-	);
-}
+
+const PageNav = () => {
+  return (
+    <div className={styles.sidebar}>
+      <div className={styles.brandContainer}>
+        <NavbarBrand tag={Link} to="/" className={styles.brand}>
+          <FaGratipay className={styles.logo} /> <span>Admin</span>
+        </NavbarBrand>
+      </div>
+
+      <div className={styles.navContainer}>
+        <Nav vertical className={styles.nav}>
+          <NavItem>
+            <NavLink tag={Link} to="/users" className={styles.navLink}>
+              <FaUsers /> Users
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink tag={Link} to="/features" className={styles.navLink}>
+              <FaList /> Features
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink tag={Link} to="/pricing" className={styles.navLink}>
+              <FaDollarSign /> Pricing
+            </NavLink>
+          </NavItem>
+          <UncontrolledDropdown nav inNavbar>
+            <DropdownToggle nav caret className={styles.navLink}>
+              <FaCog /> Options
+            </DropdownToggle>
+            <DropdownMenu className={styles.dropdown}>
+              <DropdownItem>Option 1</DropdownItem>
+              <DropdownItem>Option 2</DropdownItem>
+              <DropdownItem divider />
+              <DropdownItem>Reset</DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+        </Nav>
+      </div>
+    </div>
+  );
+};
 
 export default PageNav;
