@@ -1,4 +1,4 @@
-import { FaUsers, FaList, FaDollarSign, FaCog, FaGratipay } from "react-icons/fa";
+import { FaUsers, FaList, FaDollarSign, FaCog, FaUserTie} from "react-icons/fa";
 import styles from "./PageNav.module.scss";
 import React from "react";
 import { NavLink as Link } from "react-router-dom";
@@ -20,7 +20,7 @@ const PageNav = () => {
     <div className={styles.sidebar}>
       <div className={styles.brandContainer}>
         <NavbarBrand tag={Link} to="/" className={styles.brand}>
-          <FaGratipay className={styles.logo} /> <span>Admin</span>
+          <FaUserTie className={styles.logo} /> <span>Admin</span>
         </NavbarBrand>
       </div>
 

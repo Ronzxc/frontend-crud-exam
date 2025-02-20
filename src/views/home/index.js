@@ -25,7 +25,7 @@ const ProfileCard = () => {
   return (
     <Container className={styles.profileContainer}>
       <Card className={styles.glassCard}>
-        <NiceAvatar style={{ width: "6rem", height: "6rem" }} {...myConfig} />
+        <NiceAvatar className={styles.avatar} {...myConfig} />
         <h1 className="display-4 mt-3">Ronwaldo Espinosa</h1>
         <address className={styles.address}>
           <a href="mailto:ronsespinosa999@gmail.com">ronsespinosa999@gmail.com</a>

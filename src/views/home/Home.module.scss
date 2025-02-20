@@ -30,3 +30,15 @@
   }
 }
 
+
+:local(.avatar) {
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    width: 6rem;
+    height: 6rem;
+  }
+  
+  :local(.avatar:hover) {
+    transform: scale(1.1);
+  }

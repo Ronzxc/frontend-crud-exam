@@ -114,10 +114,10 @@ export const UserAddModal = () => {
         </Form>
       </ModalBody>
       <ModalFooter>
-        <Button color="primary" onClick={handleOnSubmit}>
+        <Button color="primary" outline onClick={handleOnSubmit}>
           Submit
         </Button>
-        <Button color="danger" onClick={toggle}>
+        <Button color="danger" outline onClick={toggle}>
           Cancel
         </Button>
       </ModalFooter>

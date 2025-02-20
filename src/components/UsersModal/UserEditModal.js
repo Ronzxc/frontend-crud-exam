@@ -77,8 +77,8 @@ export const UserEditModal = () => {
         </Form>
       </ModalBody>
       <ModalFooter>
-        <Button color="primary" onClick={handleOnSubmit}>Save</Button>
-        <Button color="secondary" onClick={toggle}>Cancel</Button>
+        <Button color="primary" outline onClick={handleOnSubmit}>Save</Button>
+        <Button color="secondary" outline onClick={toggle}>Cancel</Button>
       </ModalFooter>
     </Modal>
   );

@@ -56,10 +56,10 @@ export const UserDeleteModal = () => {
         )}
       </ModalBody>
       <ModalFooter>
-        <Button color="danger" onClick={handleOnSubmit}>
+        <Button color="danger" outline onClick={handleOnSubmit}>
           Confirm Delete
         </Button>
-        <Button color="secondary" onClick={toggle}>
+        <Button color="secondary" outline onClick={toggle}>
           Cancel
         </Button>
       </ModalFooter>
