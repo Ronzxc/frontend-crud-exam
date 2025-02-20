@@ -12,22 +12,30 @@ NPM: 8.19.2
 ## Run User Management Project (Locally)
 
 Clone the Repository
-
+```
 URL: https://github.com/Ronzxc/frontend-crud-exam.git
+```
 
 ## Go to the Project Directory
 
+```
 cd frontend-crud-exam
+```
 
 ## Install Dependencies
 
+```
 npm i or npm install
+```
 
 ## Run the project
 
 In the project directory, you can run:
 
-`npm start`
+```
+npm start
+```
+
 
 --------------------------------------------------------------------------------
 
