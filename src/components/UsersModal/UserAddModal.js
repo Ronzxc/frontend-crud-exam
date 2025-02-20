@@ -72,8 +72,8 @@ export const UserAddModal = () => {
     addUser({
       id: parseInt(result.id, 10),
       email: formData.email,
-      first_name: formData.firstName,  // Use first_name instead of firstName
-      last_name: formData.lastName,    // Use last_name instead of lastName
+      first_name: formData.firstName, 
+      last_name: formData.lastName,    
       avatarConfig: genConfig(formData.email), // Avatar generation
     });
   

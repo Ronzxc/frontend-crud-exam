@@ -36,7 +36,7 @@ const UsersList = () => {
 
 useEffect(() => {
   paginateUsers(currentPage);
-}, [currentPage, users, paginateUsers]); // ✅ Ensure users update is reflected
+}, [currentPage, users, paginateUsers]); 
 
 
   return (

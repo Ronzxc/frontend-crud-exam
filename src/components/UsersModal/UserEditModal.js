@@ -41,7 +41,7 @@ export const UserEditModal = () => {
   
     setFormData((prev) => ({
       ...prev,
-      [name]: value, // No need for a mapping, since the keys are correct
+      [name]: value, 
     }));
   };
   
@@ -50,8 +50,8 @@ export const UserEditModal = () => {
     const updatedUser = {
       id: parseInt(id, 10),
       email: formData.email,
-      first_name: formData.firstName, // ✅ Convert camelCase to snake_case
-      last_name: formData.lastName, // ✅ Convert camelCase to snake_case
+      first_name: formData.firstName, 
+      last_name: formData.lastName, 
     };
   
     console.log("Updated User:", updatedUser); // Debugging log

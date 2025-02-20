@@ -39,7 +39,7 @@ const UsersProvider = ({ children }) => {
     setUsers((prevUsers) =>
       prevUsers.map((user) =>
         user.id === updatedUser.id
-          ? { ...user, ...updatedUser } // ✅ Ensure all fields update correctly
+          ? { ...user, ...updatedUser } 
           : user
       )
     );
