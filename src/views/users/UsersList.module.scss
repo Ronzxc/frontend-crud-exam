@@ -1,4 +1,4 @@
-.usersContainer {
+:local(.usersContainer) {
   position: relative;
   background: rgba(255, 255, 255, 0.2);  
   border-radius: 12px; 
@@ -13,37 +13,37 @@
   align-content: center;
 }
 
-.actionContainer {
+:local(.actionContainer) {
     display: flex;
     justify-content: right;
     gap: 20px;
   }
 
-.row {
+  :local(.row) {
   background-color: white;
   transition: background 0.3s ease;
 }
 
-.row:hover {
+:local(.row:hover) {
   background-color: #f8f9fa;
 }
 
-.avatar {
+:local(.avatar) {
   border-radius: 50%;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
 
-.avatar:hover {
+:local(.avatar:hover) {
   transform: scale(1.1);
 }
 
-.actionButtons {
+:local(.actionButtons) {
   display: flex;
   gap: 10px;
 }
 
-.pagination {
+:local(.pagination) {
   display: flex;
   justify-content: right;
   gap: 10px;

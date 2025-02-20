@@ -6,6 +6,7 @@ import Home from 'views/home';
 import Users from 'views/users';
 import UsersProvider from 'util/ProvideUsers'; 
 import { ModalSwitch } from 'components/UsersModal/ModalSwitch';
+import NotFound from 'components/Pages/NotFound';
 
 function App() {
 	return (
@@ -20,7 +21,9 @@ function App() {
 							<Route path='/users'>
 								<Users />
 							</Route>
-							<Route path='*'>404</Route>
+							<Route path='*'>
+								<NotFound />
+							</Route>
 						</Switch>
 					</Page>
 					<ModalSwitch />

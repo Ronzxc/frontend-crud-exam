@@ -1,4 +1,4 @@
-.sidebar {
+:local(.sidebar) {
   width: 250px;
   height: 100vh;
   background: rgba(255, 255, 255, 0.2);
@@ -16,7 +16,7 @@
 }
 
   
-.brandContainer {
+:local(.brandContainer) {
   display: flex;
   flex-direction: column;
   align-items: auto;
@@ -24,7 +24,7 @@
   margin-bottom: 30px;
 }
 
-.brand {
+:local(.brand) {
   display: flex;
   align-items: center;
   font-weight: bold;
@@ -34,24 +34,24 @@
   text-decoration: none;
 }
 
-.logo {
+:local(.logo) {
   font-size: 24px;
 }
 
-.navContainer {
+:local(.navContainer) {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
-.nav {
+:local(.nav) {
   display: flex;
   flex-direction: column;
   gap: 15px;
   align-items: auto;
 }
 
-.navLink {
+:local(.navLink) {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -63,11 +63,11 @@
   width: 100%;
 }
 
-.navLink:hover {
+  navLink:hover {
   background: #e2e6ea;
 }
 
-.dropdown {
+:local(.dropdown) {
   background: white;
   border-radius: 5px;
 }

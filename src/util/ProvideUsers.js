@@ -9,7 +9,7 @@ const UsersProvider = ({ children }) => {
   // Fetch users from API
   const getUsers = useCallback(async () => {
     try {
-      const response = await fetch("https://reqres.in/api/users?page=1&per_page=10");
+      const response = await fetch("https://reqres.in/api/users?page=1&per_page=12");
 
       if (!response.ok) {
         throw new Error("Failed to fetch users");

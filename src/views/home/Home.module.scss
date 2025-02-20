@@ -1,0 +1,32 @@
+:local(.profileContainer) {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+:local(.glassCard) {
+  padding-top: 20px;
+  background: rgba(39, 170, 225, 0.58);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(39, 170, 225, 1);
+  align-items: center;
+}
+
+:local(.address) {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 10px;
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    
+    &:hover {
+      color: #ddd; 
+    }
+  }
+}
+

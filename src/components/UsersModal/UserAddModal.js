@@ -68,7 +68,6 @@ export const UserAddModal = () => {
   
     const result = await response.json();
   
-    // Fix: Explicitly store first_name and last_name
     addUser({
       id: parseInt(result.id, 10),
       email: formData.email,
